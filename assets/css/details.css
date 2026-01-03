@@ -1,0 +1,248 @@
+/* Specific styles for the boat details page */
+
+.boat-details {
+    padding-top: calc(var(--header-height) + 3rem);
+    min-height: 100vh;
+}
+
+.details-container {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 4rem;
+    align-items: flex-start;
+}
+
+.details-image-box {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px hsla(var(--hue), 24%, 12%, 0.15);
+}
+
+.details-img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.4s;
+}
+
+.details-image-box:hover .details-img {
+    transform: scale(1.05);
+}
+
+.details-content h1 {
+    font-size: var(--h1-font-size);
+    font-family: var(--title-font);
+    color: var(--title-color);
+    margin-bottom: 1.5rem;
+}
+
+.details-content #boat-tag-container {
+    margin-bottom: 1rem;
+}
+
+.fleet-tag {
+    display: inline-block;
+    background-color: var(--first-color);
+    color: var(--white-color);
+    padding: 0.25rem 0.75rem;
+    font-size: var(--smaller-font-size);
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.fleet-tag.luxury {
+    background-color: var(--second-color);
+}
+
+
+.details-specs {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    font-size: var(--h3-font-size);
+    color: var(--text-color);
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding: 1.5rem 0;
+}
+
+.details-specs i {
+    color: var(--second-color);
+    margin-right: 0.5rem;
+}
+
+#boat-description {
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+}
+
+.details-price-box {
+    background-color: #fafafa;
+    padding: 2rem;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.details-price {
+    font-size: var(--h3-font-size);
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+}
+
+.details-price strong {
+    font-size: 2rem;
+    color: var(--first-color);
+}
+
+/* Rachometro Styles */
+.price-calculator {
+    flex-grow: 1;
+}
+
+.rachometro {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e2e8f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.person-counter {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.counter-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #cbd5e1;
+    background-color: #fff;
+    color: var(--first-color);
+    font-size: 1.25rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.counter-btn:hover {
+    background-color: #f8fafc;
+    border-color: var(--first-color);
+}
+
+.counter-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: #f1f5f9;
+    border-color: #cbd5e1;
+}
+
+.person-count-display {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.25rem;
+    font-weight: var(--font-medium);
+    color: var(--title-color);
+}
+
+.person-count-display i {
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.rachometro-result {
+    background-color: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 0.75rem;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+    transition: all 0.2s;
+}
+
+.price-value-wrapper {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.25rem;
+    width: 170px; /* Fixed width */
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center content */
+    align-items: baseline; /* Align text baseline */
+    gap: 0.25rem; /* Space between R$ and number */
+    transition: all 0.2s;
+}
+
+.price-per-person {
+    text-align: center;
+}
+
+.currency-symbol {
+    font-size: 1rem;
+    color: var(--text-color);
+    font-weight: var(--font-medium);
+}
+
+.price-per-person strong {
+    font-size: 1.75rem;
+    color: var(--second-color);
+    font-weight: 700;
+}
+
+.price-per-person small {
+    display: block;
+    font-size: var(--small-font-size);
+    color: var(--text-color-light);
+}
+
+/* Responsive styles */
+@media screen and (max-width: 992px) {
+    .details-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .details-price-box {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .rachometro {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}
+
+/* Back button */
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-color-light);
+    font-weight: var(--font-medium);
+    margin-bottom: 2rem;
+    transition: color 0.3s;
+}
+
+.btn-back:hover {
+    color: var(--first-color);
+}
+
+.btn-back i {
+    font-size: 1.25rem;
+}
