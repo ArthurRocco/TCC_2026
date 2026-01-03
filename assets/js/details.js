@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 3. If no boat is found, show an error message
     if (!boat) {
-        detailsContainer.innerHTML = '<h1>Lancha não encontrada</h1><p>O link que você acessou parece estar quebrado. Por favor, <a href="index.html">volte para a página inicial</a> e tente novamente.</p>';
+        detailsContainer.innerHTML = '<h1>Lancha não encontrada</h1><p>O link que você acessou parece estar quebrado. Por favor, <a href="./index.html">volte para a página inicial</a> e tente novamente.</p>';
         mainTitle.textContent = "Lancha não encontrada | OceanLife";
         return;
     }
