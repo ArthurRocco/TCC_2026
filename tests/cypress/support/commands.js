@@ -1,5 +1,5 @@
 Cypress.Commands.add('acessaPagina', () => {
-    cy.visit('./src/index.html')
+    cy.visit('http://127.0.0.1:5500/src/')
 });
 
 Cypress.Commands.add('preencheCampoSuperior', () => {
